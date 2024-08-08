@@ -1,0 +1,353 @@
+<section id="services" style=" width: 100%;
+    height: 97vh;">
+    <div class="container">
+        <h1 class="text-center" style="color: aliceblue;">Services</h1>
+
+        <div class="row" style=" margin-left: auto; margin-right: auto; width: 50%; height: 50%;">
+            <div class="col-sm-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        
+                        <a (click)="scrolltoStructure('itemlist')">
+                            <h4 class="card-title mt-3" style="text-align: center;">Add Item</h4>
+                        </a>
+                        <p class="card-text mt-3" style="text-align: center ;">You can Add your Items to item list from
+                            here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class='fas servicesIcon fa-layer-group'></i>
+                        <a  (click)="scrolltoStructure('stocklist')">
+                            <h4 class="card-title mt-3" style="text-align: center;">Add Stock</h4>
+                        </a>
+                        <p class="card-text mt-3" style="text-align: center; ">You can Add your Stock to stock list from
+                            here
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class='far servicesIcon fa-check-circle'></i>
+                        <a (click)="scrolltoStructure('purchaselist')">
+                            <h4 class="card-title mt-3" style="text-align: center;">Customer Bill</h4>
+                        </a>
+                        <p class="card-text mt-3" style="text-align: center;">You can give bill to your Customer from
+                            here
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<br><br><br>
+<!-- <div style="justify-content: center;border: 1px solid;"> -->
+<!-- <div class="parent" style="justify-content: space-evenly;">     -->
+<div #itemlist id="itemlist" style="justify-content: space-evenly;
+ width: 100%;
+ height: 99vh;">
+
+
+
+    <div class="row mt-4" style="align-items: center;">
+        <div class="col-lg-5" style="margin-bottom: 2cap; justify-content: space-evenly; ">
+            <div class="card shadow border-0  mx-auto" style="width: 50%;">
+                <div class="card-header">
+                    <h5 class="mb-0">Items</h5>
+                </div>
+                <div class="table-responsive mx-auto">
+                    <div class="table_outer">
+                        <table class="table table-hover table-nowrap mx-auto">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col-lg-6">Item Id</th>
+                                    <th scope="col-lg-6">Item Name</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <tr scope="row sm-6" *ngFor="let item of st">
+
+                                    <td class="col-sm-6">
+                                        {{item.itemId}}
+                                    </td>
+
+                                    <td class="col-sm-6">
+                                        <a class="text-heading font-semibold" href="#">{{item.itemName}}</a>
+                                    </td>
+                                    
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="heading text-center col-sm-2">
+            <h1>Items</h1>
+        </div>
+        <div class="col-lg-5" style="justify-content: space-evenly;">
+            <div class="card shadow border-1 mt-6 mx-auto" style="width: 50%; padding-bottom: 2rem;">
+                <div class="card-header">
+                    <h5 class="mb-0">Add Items</h5>
+                </div>
+                <div class="mx-auto">
+                    <div class="mx-auto mt-5" style="align-items: center; ">
+
+
+
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <!-- <td> <label for="ItemType">Item Id: </label></td> -->
+                            <input type="number" placeholder="ItemID" class="form-control form-control-sm"
+                                [(ngModel)]="array.ItemID">
+
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+
+                            <!-- <td> <label for="itemname">Item Name: </label></td> -->
+                            <input type="text" placeholder="ItemName" class="form-control form-control-sm"
+                                [(ngModel)]="array.ItemName">
+
+
+                        </div>
+                        <div>
+                            <button data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-primary btn-sm btn-flex mx-5"
+                                (click)="submit(array,'PostItem')">Submit</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<!-- <div class="parent" style="justify-content: space-evenly;">     -->
+<div #stocklist id="stocklist" style="justify-content: space-evenly;width: 100%;
+ height: 99vh;">
+
+
+
+    <div class="row mt-4" style="align-items: center; text-align: center;">
+        <div class="col-lg-5" style="margin-top: 2cap; justify-content: space-evenly; ">
+            <div class="card shadow border-0  mx-auto" style="width: 70%;">
+                <div class="card-header">
+                    <h5 class="mb-0">Stock</h5>
+                </div>
+                <div class="table-responsive mx-auto">
+                    <div class="table_outer">
+                        <table class="table table-hover table-nowrap mx-auto">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col-lg-3">Item Name</th>
+                                    <th scope="col-lg-1">Mrp</th>
+                                    <th scope="col-lg-5">Expiry Date</th>
+                                    <th scope="col-lg-3">Stock Items</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <tr scope="row sm-6" *ngFor="let item of front" style="text-align: center;">
+
+                                    <td class="col-sm-3">
+                                        <a class="text-heading font-semibold" href="#">{{item.itemName}}</a>
+                                    </td>
+
+                                    <td class="col-sm-1">
+                                        {{item.mrp}}
+                                    </td>
+
+                                    <td class="col-sm-5">
+                                        {{item.expiryDate}}
+                                    </td>
+
+                                    <td class="col-sm-3">
+                                        {{item.sItems}}
+                                    </td>
+                                    <td></td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sheading text-center col-sm-2">
+            <h1>Stock</h1>
+        </div>
+        <div class="col-lg-5 mt-2" style="justify-content: space-evenly; padding-top: 2rem;">
+            <div class="card shadow border-1 mt-6 mx-auto" style="width: 50%; padding-bottom: 2rem;">
+                <div class="card-header">
+                    <h5 class="mb-0">Add Stock</h5>
+                </div>
+                <div class="mx-auto">
+                    <div class="mx-auto mt-5" style="align-items: center; ">
+
+
+
+                        <div data-mdb-input-init class="form-outline mb-3">
+
+                            <select name="ItemId" class="form-control form-control-sm" [(ngModel)]="list.ItemID">
+                                <option value="">Item Name</option>
+                                <option *ngFor="let item of st" [value]="item.itemId">{{item.itemName}}</option>
+                            </select>
+
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="number" placeholder="MRP" class="form-control form-control-sm"
+                                [(ngModel)]="list.Mrp">
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="number" placeholder="Purchase Cost" class="form-control form-control-sm"
+                                [(ngModel)]="list.PurchaseCost">
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="string" placeholder="Batch Id" class="form-control form-control-sm"
+                                [(ngModel)]="list.BatchID">
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="datetime" placeholder="Expiry Date" class="form-control form-control-sm"
+                                [(ngModel)]="list.ExpiryDate">
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="number" placeholder="Stock Items" class="form-control form-control-sm"
+                                [(ngModel)]="list.SItems">
+                        </div>
+                        <div>
+                            <button data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-primary btn-sm btn-flex mx-5"
+                                (click)="submit(list,'PostStock')">Submit</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- </div> -->
+<br>
+<!-- <div class="parent" style="justify-content: space-evenly; margin-bottom: 2cap">     -->
+<div #purchaselist id="purchaselist" style="justify-content: space-evenly; width: 100%;
+ height: 99vh;">
+
+
+
+    <div class="row mt-4" style="align-items: center; text-align: center;">
+        <div class="col-lg-5" style="margin-bottom: 2cap; justify-content: space-evenly; ">
+            <div class="card shadow border-0  mx-auto" style="width: 60%;">
+                <div class="card-header">
+                    <h5 class="mb-0">Purchase List</h5>
+                </div>
+                <div class="table-responsive mx-auto">
+                    <div class="table_outer">
+                        <table class="table table-hover table-nowrap mx-auto">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col-lg-3">Item Name</th>
+                                    <th scope="col-lg-6">Purchase Date</th>
+                                    <th scope="col-lg-3">Purchase Items</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <tr scope="row sm-6" *ngFor="let item of back" style="text-align: center;">
+
+                                    <td class="col-sm-3">
+                                        <a class="text-heading font-semibold" href="#">{{item.itemName}}</a>
+                                    </td>
+
+                                    <td class="col-sm-6">
+                                        {{item.pDate}}
+                                    </td>
+
+                                    <td class="col-sm-3">
+                                        {{item.pItems}}
+                                    </td>
+                                    <td></td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="heading text-center col-sm-2">
+            <h1>Purchase</h1>
+        </div>
+        <div class="col-lg-5" style="justify-content: space-evenly;">
+            <div class="card shadow border-1 mt-6 mx-auto" style="width: 50%; padding-bottom: 2rem;">
+                <div class="card-header">
+                    <h5 class="mb-0">Customer Sale</h5>
+                </div>
+                <div class="mx-auto">
+                    <div class="mx-auto mt-5" style="align-items: center; ">
+
+
+
+                        <div data-mdb-input-init class="form-outline mb-3">
+
+                            <select name="ItemId" class="form-control form-control-sm" [(ngModel)]="arr.ItemID">
+                                <option value="">Item Name</option>
+                                <option *ngFor="let item of st" [value]="item.itemId">{{item.itemName}}</option>
+                            </select>
+
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="number" placeholder="Purchase ID" class="form-control form-control-sm"
+                                [(ngModel)]="arr.PurachaseID">
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="datetime" placeholder="Expiry Date" class="form-control form-control-sm"
+                                [(ngModel)]="arr.PurchaseDate">
+                        </div>
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="number" placeholder="Stock Items" class="form-control form-control-sm"
+                                [(ngModel)]="arr.PItems">
+                        </div>
+                        <div>
+                            <button data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-primary btn-sm btn-flex mx-5"
+                                (click)="submit(arr,'PostPurchase')">Submit</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- </div> -->
+<!-- <a id="BB">This is Bottom of the page</a> -->

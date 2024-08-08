@@ -1,0 +1,7 @@
+.image{
+    border: 1px;
+    border-color: black;
+    width: 8%;
+    height: 8%;
+    float: inline-start;
+}

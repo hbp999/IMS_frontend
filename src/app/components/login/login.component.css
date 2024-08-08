@@ -1,0 +1,11 @@
+.passbtn{
+float: inline-end;
+    margin-top: -35px;
+    margin-right: 10px;
+    background-color: white;
+}
+
+.bd{
+    background-image: url(../../../../public/assets/ls.jpg);
+    background-size: contain;
+}

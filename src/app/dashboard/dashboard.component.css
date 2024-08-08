@@ -1,0 +1,12 @@
+.table_outer { 
+    height: 35em;
+    overflow-y: auto; 
+}
+
+.hh{
+    background-image: url(../../../public/assets/ls.jpg);
+}
+
+#navbarVertical{
+    background-color: #d9dddf !important; 
+}

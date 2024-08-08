@@ -1,0 +1,57 @@
+
+.container {
+    padding-top: 130px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a :hover{
+    color: rgb(71, 154, 231);
+}
+/* .table-responsive{
+    width:50%;
+} */
+.table_outer { 
+    height: 15em; overflow-y: auto; 
+}
+
+.servicesText.card {
+    height: 180px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid #008000;
+}
+#services{
+    background-image: url(../../../../public/assets/ls.jpg);
+    background-size: contain;
+}
+
+#itemlist{
+    padding-top: 8rem;
+    background-image: url(../../../../public/assets/gr.jpg);
+    background-size: cover;
+}
+#stocklist{
+    padding-top: 8rem;
+    background-image: url(../../../../public/assets/st.jpg);
+    background-size: cover;
+}
+
+#purchaselist{
+    padding-top: 8rem;
+    background-image: url(../../../../public/assets/bill.jpg);
+    background-size: cover;
+}

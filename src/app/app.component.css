@@ -1,0 +1,63 @@
+.title{
+    p{
+        text-align: right;
+        margin-right: 30cap;
+    }
+    text-align: center;
+    background-color: rgb(95, 199, 218);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.app-Ims{
+    background-color: bisque;
+}
+button{
+    background-color: rgb(155, 153, 152);
+    color: black;
+}
+.h1{
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(27, 186, 235);
+  }
+
+  .nav-item {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+  }
+ .navbar-brand{
+  margin-left: 0;
+  color: rgb(255, 255, 255);
+ }
+
+ .social-icons {
+  font-size: 36px;
+  cursor: pointer;
+}
+#footer {
+  background-color: #808080;
+  text-align: center;
+}
+.bi-facebook:hover,.bi-instagram:hover,.bi-twitter:hover,.bi-linkedin:hover {
+  color: red;
+}
