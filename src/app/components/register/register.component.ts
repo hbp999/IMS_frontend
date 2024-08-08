@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -19,21 +20,38 @@ tray: any={
   MailId:'',
   Password:''
 }
+isValid: boolean = false;
 hide=true;
+string: any;
 
 constructor(private http: HttpClient, private router :Router) {
+  
 
 }
+
+Valid(){
+  if(this.tray.MailId == "" || this.tray.Password == ""){
+    this.isValid = false;
+  }
+
+}
+
 toggleVisibility(): void{
   this.hide = !this.hide;
 }
 submit() {
+  if(this.tray.MailId == "" && this.tray.Password == ""){
+    console.log('Enter Credentials');
+  }
 
+  else{
   this.addItems('https://localhost:44396/api/IMS/PostUser',this.tray)
     .subscribe(
       items => {
-        console.log(items);
+          console.log(items);
+          this.router.navigateByUrl('/Login') ;
       });
+    }
       
 }
 login(){

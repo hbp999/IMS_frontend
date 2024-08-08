@@ -34,8 +34,11 @@ export class LoginComponent {
     this.hide = !this.hide;
   }
   submit() {
+    if(this.pass.MailId == "" || this.pass.Password == ""){
+      console.log('Enter Credentials');
+    }
 
-    
+    else{
     this.addItems('https://localhost:44396/api/IMS/PostLogin', this.pass)
     .subscribe(
       items => {
@@ -50,6 +53,7 @@ export class LoginComponent {
       });
          
         }
+      }
          
         notifyMessage() {
           
