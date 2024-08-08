@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, CanActivateChild, CanDeactivate, CanLoad, Router } from '@angular/router';
+import { CanActivate, CanActivateChild, CanDeactivate, Router } from '@angular/router';
 
 
 @Injectable({

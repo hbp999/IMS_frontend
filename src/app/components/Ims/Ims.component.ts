@@ -17,6 +17,7 @@ export class ImsComponent {
   @ViewChild('stocklist') structure: ElementRef | undefined;
   @ViewChild('itemlist') structure1: ElementRef | undefined;
   @ViewChild('purchaselist') structure2: ElementRef | undefined;
+  @ViewChild('services') structure3: ElementRef | undefined;
   array: any = {
     ItemName: '',
   }
@@ -51,6 +52,9 @@ export class ImsComponent {
     }
     else if(param=='itemlist'){
       this.structure1?.nativeElement.scrollIntoView({behavior:'smooth'});
+    }
+    else if(param == 'services' ){
+      this.structure3?.nativeElement.scrollIntoView({behavior:'smooth'});
     }
     else{
       this.structure2?.nativeElement.scrollIntoView({behavior:'smooth'});

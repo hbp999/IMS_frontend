@@ -20,7 +20,6 @@ tray: any={
   MailId:'',
   Password:''
 }
-isValid: boolean = false;
 hide=true;
 string: any;
 
@@ -29,12 +28,6 @@ constructor(private http: HttpClient, private router :Router) {
 
 }
 
-Valid(){
-  if(this.tray.MailId == "" || this.tray.Password == ""){
-    this.isValid = false;
-  }
-
-}
 
 toggleVisibility(): void{
   this.hide = !this.hide;
