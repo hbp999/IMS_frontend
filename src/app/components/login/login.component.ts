@@ -27,9 +27,7 @@ export class LoginComponent {
     if(isLogin == "true"){
       this.router.navigateByUrl('/');
       
-    }
-
-    
+    }   
 
   }
   toggleVisibility(): void{
@@ -58,6 +56,10 @@ export class LoginComponent {
             notify({ message: "form submitted" }, "success", 2000);
           
         }
+
+      login(){
+        this.router.navigateByUrl('/Register');
+      }
         
   addItems(url: string, data: any): Observable<string> {
     return this.http.post(url, data, { responseType: 'text' });

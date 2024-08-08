@@ -5,38 +5,46 @@
 <p><cite>A <abbr title="BITAPPS">Bitapps</abbr> Initiative</cite></p>
 </div> -->
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll px-0 py-3" *ngIf="isLogin == false" style="background-color: rgb(42, 43, 41);">
-    <div class="container-xl">
-      <!-- Logo -->
-      <a class="navbar-brand" >
-        <!-- <img src="../../public/assets/bp.png" class="h-8" alt="..."> -->
-         Inventory Management
-      </a>
-      <!-- Navbar toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <!-- Nav -->
-         
-        <div class="navbar-nav mx-lg-auto">
-          <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);" (click)= "changeaction('')" >Home</a>
-          <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);" (click)="changeaction('Items')">Services</a>
-          <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);" (click)="changeaction('Contact')">Contact Us</a>
-        </div>
-        <div class="navbar-nav ms-lg-4">
-          <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);" (click)="changeaction('Register')">Sign up</a>
-        </div>
-        <div class="d-flex align-items-lg-center mt-3 mt-lg-0" >
-          <a (click)="changeaction('Login')" class="btn btn-sm w-full w-lg-auto" style="color: white; background-color: red;">
-            Login
-          </a>
-        </div>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll px-0 py-3" *ngIf="isLogin == false"
+  style="background-color: rgb(166, 168, 163);">
+  <div class="container-xl">
+    <!-- Logo -->
+    <a>
+      <img src="../../assets/bp.png" class="h-8" alt="Inventory Management" style="color: white;">
+
+    </a>
+    <!-- Navbar toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!-- Nav -->
+
+      <div class="navbar-nav mx-lg-auto">
+        <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);" (click)="changeaction('')">Home</a>
+        <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);"
+          (click)="changeaction('Items')">Services</a>
+        <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);" (click)="changeaction('Contact')">Contact
+          Us</a>
       </div>
+      <!-- <div *ngIf="">
+        <div class="navbar-nav ms-lg-4">
+          <a class="nav-item nav-link active" style="color: rgb(255, 255, 255);" (click)="changeaction('Register')">Sign
+            up</a>
+        </div>
+        <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
+          <a (click)="changeaction('Login')" class="btn btn-sm w-full w-lg-auto"
+            style="color: white; background-color: red;">
+            Login
+          </a> 
+        </div>
+      </div>-->
     </div>
-  </nav>
- 
+  </div>
+</nav>
+
 
 <!-- <div>
 <ul>
@@ -52,16 +60,15 @@
 <router-outlet></router-outlet>
 
 
-<footer id="footer" >
+<footer id="footer">
   <div class="container-fluid ">
-      <!-- social media icons -->
-      <div class="social-icons ">
-          <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
-          <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-          
-      </div>
+    <!-- social media icons -->
+    <div class="social-icons ">
+      <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+
+    </div>
   </div>
 </footer>
-

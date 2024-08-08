@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonEngine } from '@angular/ssr';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -18,7 +20,8 @@ tray: any={
   Password:''
 }
 hide=true;
-constructor(private http: HttpClient) {
+
+constructor(private http: HttpClient, private router :Router) {
 
 }
 toggleVisibility(): void{
@@ -32,6 +35,9 @@ submit() {
         console.log(items);
       });
       
+}
+login(){
+  this.router.navigateByUrl('/Login');
 }
 addItems(url: string, data: any): Observable<string> {
   return this.http.post(url, data, { responseType: 'text' });
