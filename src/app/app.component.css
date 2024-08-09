@@ -57,6 +57,9 @@ ul {
 #footer {
   background-color: #808080;
   text-align: center;
+  
+  
+  width: 100%;
 }
 .bi-facebook:hover,.bi-instagram:hover,.bi-twitter:hover,.bi-linkedin:hover {
   color: red;

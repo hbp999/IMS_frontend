@@ -1,0 +1,12 @@
+.chart-container{
+    padding-top: 6rem;
+    align-items: center;
+}
+
+#MyChart{
+    padding-top: 3rem;
+    width: 70% !important;
+    height:70% !important;
+    /* padding-left: 35%; */
+    align-items: center;
+}

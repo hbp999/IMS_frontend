@@ -55,3 +55,7 @@ a :hover{
     background-image: url(../../../../public/assets/bill.jpg);
     background-size: cover;
 }
+
+a{
+    cursor: pointer;
+}

@@ -40,6 +40,9 @@ export class DashboardComponent {
   navigateToServices() {
     this.router.navigate(['/Items']);
   }
+  navigateToCharts(){
+    this.router.navigateByUrl('/BarChart')
+  }
   
   getItems(url: string): Observable<object> {
     return this.http.get(url);
